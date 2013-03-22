@@ -1,0 +1,17 @@
+{
+ "name": "Find Text",
+ "version": "0.1",
+ "description": "Find Text",
+ "manifest_version": 2,
+ "browser_action": {
+   "default_icon": "on.png",
+   "default_popup": "popup.html" 
+ },
+ "permissions": [
+   "tabs","http://*/*","https://*/*"
+ ],
+ "background": {
+    "scripts": ["bgp.js","jquery-1.9.1.min.js"],
+    "persistent": true
+ }
+}
