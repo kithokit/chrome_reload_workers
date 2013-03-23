@@ -2,16 +2,26 @@
 <html>
   <head>
     <style>
-      body { width: 300px; }
+      body { 
+        width: 300px;
+        height: 300px;
+      }
     </style>
-    <script src="jquery-1.9.1.min.js"></script>
-    <script src="popup.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popup.js"></script>
   </head>
   <body>
-    <div>Desired Search Url</div>
-    <input type="text" id="searchUrl">
-    <div>Desired Search Text</div>
-    <input type="text" id="searchText">
-    <button id="searchButton">Search</button>
+  <div class="well">
+      <h4>Desired Search Url</h4>
+      <input type="text" id="searchUrl" value="www.urbtix.hk">
+      <h4>Desired Search Text</h4>
+      <input type="text" id="searchText" value="Server Busy">
+      <h4>Number of browsers</h4>
+      <input type="text" id="numOfBrowser" class="input-small" value="5">
+      <br>
+      <button class="btn btn-info" id="searchButton">Search</button>
+   <div>
   </body>
 </html>
