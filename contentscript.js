@@ -2,7 +2,6 @@ chrome.extension.onMessage.addListener(onMessage);
 
 
 function onMessage(request, sender, sendResponse) {
-  alert("contentscript!")
 }
 
 var regex = /Server Busy/
