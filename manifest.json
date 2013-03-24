@@ -31,8 +31,8 @@
   ],
 
   "icons" : {
-    "48" : "sandwich-48.png",
-    "128" : "sandwich-128.png"
+    "48" : "img/rifle.jpg",
+    "128" : "img/rifle.jpg"
   },
 
   "manifest_version": 2
