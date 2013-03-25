@@ -1,6 +1,7 @@
 function onRequest(request, sender, sendResponse) {
  // Request from popup.js
  if (sender.tab.title.indexOf("popup") !=-1){
+   localStorage["count"] = 0;
    localStorage["url"] = request.url;
    localStorage["searchText"] = request.searchText;
    localStorage["number"] = request.number;
@@ -19,7 +20,12 @@ function onRequest(request, sender, sendResponse) {
  }
 
  if (request.message == "success_loaded"){
-    chrome.browserAction.setBadgeText({text: "OK!"});
+   chrome.browserAction.setBadgeText({text: "Hit!"});
+ }
+
+ if (request.message == "not_success_loaded"){
+   localStorage["count"] = parseInt(localStorage["count"]) + 1 ;
+   chrome.browserAction.setBadgeText({text: localStorage["count"]});
  }
 
  sendResponse({});

@@ -1,4 +1,9 @@
 $(function(){
+
+  $('#searchUrl').val(localStorage["url"]);
+  $('#searchText').val(localStorage["searchText"]);
+  $('#numOfBrowser').val(localStorage["number"]);
+
   $('#searchButton').click(function(){
     url = $('#searchUrl').val();
     searchtext = $('#searchText').val();
@@ -6,7 +11,8 @@ $(function(){
     chrome.extension.sendRequest({ 
       url: url, 
       number: number,
-      searchtext: searchtext,
+      searchText: searchtext,
     }, function(response){});
+    chrome.browserAction.setBadgeText({text: "Fire!"});
   });
 });
