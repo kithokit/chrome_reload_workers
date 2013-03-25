@@ -6,6 +6,9 @@ $(function(){
 
   $('#searchButton').click(function(){
     url = $('#searchUrl').val();
+    if (url.indexOf("http://") == -1){
+      url = "http://" + url;
+    }
     searchtext = $('#searchText').val();
     number = $('#numOfBrowser').val();
     chrome.extension.sendRequest({ 

@@ -3,8 +3,8 @@
   <head>
     <style>
       body { 
-        width: 300px;
-        height: 300px;
+        width: 270px;
+        height: 230px;
       }
     </style>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -14,14 +14,24 @@
   </head>
   <body>
   <div class="well">
-      <h4>Desired Search Url</h4>
-      <input type="text" id="searchUrl">
-      <h4>Desired Search Text</h4>
-      <input type="text" id="searchText">
-      <h4>Number of browsers</h4>
-      <input type="text" id="numOfBrowser" class="input-small">
-      <br>
-      <button class="btn btn-info" id="searchButton">Search</button>
+    <b>Welcome to machinegun loader<b><br>
+    <span class="label label-info">Search</span><br>
+    <input type="text" id="searchUrl">
+    <span class="label label-info">until keyword</span><input type="text" id="searchText"><br>
+    <span class="label label-info">not to be found</span>
+    <p>
+    <b>Number of Guns to fire</b>
+    <select class="span1" id="numOfBrowser">
+      <option>1</option>
+      <option>2</option>
+      <option>4</option>
+      <option>8</option>
+      <option>10</option>
+      <option>15</option>
+    </select>
+    <br>
+    <button class="btn btn-danger btn-small" id="searchButton">Fire</button>
+</form
    <div>
   </body>
 </html>

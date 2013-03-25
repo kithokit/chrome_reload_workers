@@ -6,7 +6,7 @@ function onRequest(request, sender, sendResponse) {
    localStorage["searchText"] = request.searchText;
    localStorage["number"] = request.number;
    for (i=0;i<request.number; ++i){
-      chrome.tabs.create({url: "http://" + request.url}, function(tab){
+      chrome.tabs.create({url: request.url}, function(tab){
       });
    };    
  }
