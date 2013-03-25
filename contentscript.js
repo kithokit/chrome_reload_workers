@@ -1,19 +1,18 @@
-chrome.extension.onMessage.addListener(onMessage);
+chrome.extension.onMessage.addListener(function(request,sender,sendResponse){
 
+  if (request.message == "start_search"){
+    var regex = new RegExp(request.searchText);
+    //var regex = /Server Busy/;
+     //Test the text of the body element against our regular expression.
+    if (regex.test(document.body.innerText)) {
+      setTimeout(function(){
+        window.location = "http://" + request.url;
+        //window.location = "http://www.urbtix.hk";
+      },1000);
+    } else {
+      chrome.extension.sendRequest({message:"success_loaded"}, function(response) {});
+    }
+  }
+});
 
-function onMessage(request, sender, sendResponse) {
-}
-
-var regex = /Server Busy/
-// Test the text of the body element against our regular expression.
-if (regex.test(document.body.innerText)) {
-  // The regular expression produced a match, so notify the background page.
-  //var choose = document.getElementById('toMainButton');
-  //setTimeout(function(){ choose.click(); } , 1500 ) ;
-  //chrome.browserAction.setBadgeText({text: "no"});
-  chrome.extension.sendRequest({result:"find"}, function(response) {});
-} else {
-  chrome.extension.sendRequest({result:"notfind"}, function(response) {});
-  
-}
-
+chrome.extension.sendRequest({message:"contentscript_is_loaded"}, function(response) {});
