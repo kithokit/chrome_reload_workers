@@ -1,7 +1,8 @@
 {
-  "name" : "Sniper Loader",
+  "name" : "MachineGun ReLoader",
   "version" : "0.1",
-  "description" : "Target loader to load the target thing",
+  "description" : "Spawn a number of chrome tabs and keep doing refresh/reload until
+  certain keyword found/not found",
   "background" : {
     "scripts": ["js/background.js"]
   },

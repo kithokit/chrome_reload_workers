@@ -31,7 +31,5 @@ function onRequest(request, sender, sendResponse) {
  sendResponse({});
 };
 
-// update icon when ok
-chrome.browserAction.setBadgeText({text: "N/A"});
 // Listen for the content script to send a message to the background page.
 chrome.extension.onRequest.addListener(onRequest);
