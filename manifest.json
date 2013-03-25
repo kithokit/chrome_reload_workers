@@ -8,9 +8,9 @@
   },
 
   "browser_action": {
-     "default_icon": "img/rifle.jpg",
+     "default_icon": "img/machinegun.jpg",
      "default_popup": "popup.html",
-     "default_title": "for urbtix only now"
+     "default_title": "MachineGun Loader"
    },
 
   "permissions": [
@@ -32,8 +32,8 @@
   ],
 
   "icons" : {
-    "48" : "img/rifle.jpg",
-    "128" : "img/rifle.jpg"
+    "48" : "img/machinegun.jpg",
+    "128" : "img/machinegun.jpg"
   },
 
   "manifest_version": 2
