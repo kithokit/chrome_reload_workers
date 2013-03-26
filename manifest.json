@@ -8,7 +8,7 @@
   },
 
   "browser_action": {
-     "default_icon": "img/machinegun.png",
+     "default_icon": "img/megaload.png",
      "default_popup": "popup.html",
      "default_title": "MachineGun Loader"
    },
@@ -32,8 +32,8 @@
   ],
 
   "icons" : {
-    "48" : "img/machinegun.png",
-    "128" : "img/machinegun.png"
+    "48" : "img/megaload.png",
+    "128" : "img/megaload.png"
   },
 
   "manifest_version": 2
