@@ -6,17 +6,20 @@ function onRequest(request, sender, sendResponse) {
    localStorage["searchText"] = request.searchText;
    localStorage["number"] = request.number;
    for (i=0;i<request.number; ++i){
-      chrome.tabs.create({url: request.url}, function(tab){
-      });
+      setTimeout(function(){
+        chrome.tabs.create({url: request.url}, function(tab){});
+      },i*200);
    };    
  }
 
  if (request.message == "contentscript_is_loaded"){
-   chrome.tabs.sendMessage(sender.tab.id, {
-     message:"start_search",
-     url: localStorage["url"],
-     searchText : localStorage["searchText"],
-   });
+   if (localStorage["url"] != undefined){
+     chrome.tabs.sendMessage(sender.tab.id, {
+       message:"start_search",
+       url: localStorage["url"],
+       searchText : localStorage["searchText"],
+     });
+   }
  }
 
  if (request.message == "success_loaded"){
