@@ -1,5 +1,6 @@
 chrome.extension.onMessage.addListener(function(request,sender,sendResponse){
 
+  console.log(request);
   if (request.message == "start_search"){
     var regex = new RegExp(request.searchText);
      //Test the text of the body element against our regular expression.
